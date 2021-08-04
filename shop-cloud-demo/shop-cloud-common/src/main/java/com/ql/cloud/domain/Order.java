@@ -21,6 +21,6 @@ public class Order {
     private String username;
     private Integer pid;
     private String productName;
-    private String productPrice;
+    private Double productPrice;
     private Integer number;
 }

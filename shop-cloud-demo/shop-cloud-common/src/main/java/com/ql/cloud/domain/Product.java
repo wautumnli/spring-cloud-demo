@@ -19,6 +19,6 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer pid;
     private String productName;
-    private String productPrice;
+    private Double productPrice;
     private Integer stock;
 }

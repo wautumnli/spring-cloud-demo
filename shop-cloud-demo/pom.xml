@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>shop-cloud-common</module>
+        <module>shop-cloud-user</module>
+        <module>shop-cloud-product</module>
+        <module>shop-cloud-order</module>
     </modules>
 
     <parent>
