@@ -1,4 +1,4 @@
-package cloud.service;
+package com.ql.cloud.service;
 
 import com.ql.cloud.domain.Product;
 

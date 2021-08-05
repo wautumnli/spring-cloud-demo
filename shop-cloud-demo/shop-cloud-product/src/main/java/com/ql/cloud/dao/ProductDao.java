@@ -1,4 +1,4 @@
-package cloud.doa;
+package com.ql.cloud.dao;
 
 import com.ql.cloud.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,9 @@
 package com.ql.cloud.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +15,9 @@ import javax.persistence.Id;
  * @date: 2021-08-04 23:13
  **/
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "shop_order")
 public class Order {
     @Id

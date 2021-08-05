@@ -1,7 +1,7 @@
-package cloud.service.impl;
+package com.ql.cloud.service.impl;
 
-import cloud.doa.ProductDao;
-import cloud.service.ProductService;
+import com.ql.cloud.dao.ProductDao;
+import com.ql.cloud.service.ProductService;
 import com.ql.cloud.domain.Product;
 import org.springframework.stereotype.Service;
 

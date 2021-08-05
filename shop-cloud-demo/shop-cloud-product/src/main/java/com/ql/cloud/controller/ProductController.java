@@ -1,6 +1,6 @@
-package cloud.controller;
+package com.ql.cloud.controller;
 
-import cloud.service.ProductService;
+import com.ql.cloud.service.ProductService;
 import com.alibaba.fastjson.JSON;
 import com.ql.cloud.domain.Product;
 import lombok.extern.slf4j.Slf4j;
