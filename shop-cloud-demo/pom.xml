@@ -13,6 +13,7 @@
         <module>shop-cloud-user</module>
         <module>shop-cloud-product</module>
         <module>shop-cloud-order</module>
+        <module>shop-cloud-gateway</module>
     </modules>
 
     <parent>
@@ -44,6 +45,13 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

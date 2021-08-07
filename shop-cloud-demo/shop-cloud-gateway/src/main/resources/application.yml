@@ -1,0 +1,31 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 让gateway从nacos中获取服务信息
+      routes:
+        - id: product_route # 路由唯一id
+          # uri: http://localhost:8081 # 请求转发地址
+          uri: lb://service-product # lb指负载均衡，后面跟微服务具体标识
+          order: 1 # 路由优先级，数字越小优先级越高
+          predicates: # 条件判断，满足条件的转发
+            - Path=/product-serv/** # 路由请求地址满足此信息
+            - Age=18,60 # 自定义断言
+          filters: # 过滤器，请求传递过程中做一些处理
+            - StripPrefix=1 # 请求转发之前去掉一层
+            - Log=true,false # 自定义过滤
+        - id: order_route # 路由唯一id
+          uri: lb://service-order # lb指负载均衡，后面跟微服务具体标识
+          order: 1 # 路由优先级，数字越小优先级越高
+          predicates: # 条件判断，满足条件的转发
+            - Path=/order-serv/** # 路由请求地址满足此信息
+          filters: # 过滤器，请求传递过程中做一些处理
+            - StripPrefix=1 # 请求转发之前去掉一层
